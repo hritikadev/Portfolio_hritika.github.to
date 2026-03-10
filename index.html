@@ -1,496 +1,974 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Hritika Dev</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/photo2.jpeg" alt="" /></span>
-					<h1 id="logo"><a href="#">Hritika Dev</a></h1>
-					<p>Embarking on a journey through the <br>data landscape.</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Can Do</a></li>
-						<li><a href="#three">A Few Projects</a></li>
-						<li><a href="#four">Find me</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href= https://www.linkedin.com/in/devhritika  target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href= https://github.com/hritikadev  target="_blank"  class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href= mailto:hritikadev@gmail.com  target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hritika Dev — Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080C10;
+    --surface: #0E1419;
+    --surface2: #141C24;
+    --border: rgba(99,179,237,0.12);
+    --accent: #63B3ED;
+    --accent2: #F6AD55;
+    --text: #E2E8F0;
+    --muted: #718096;
+    --faint: rgba(226,232,240,0.06);
+  }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-				<!-- Main -->
-					<div id="main">
+  html { scroll-behavior: smooth; }
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="left">
-									<img src="images/background.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h3>Hritika Dev</h3>
-										<h3></h3>
-				
-									</header>
-									<p>I am an engineering graduate of 2024. <br>Currently open for work oppurtunities as data analyst
-										 and data scientist roles.</p>
-								</div>
-							</section>
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Can Do</h3>
-									<p></p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">SQL</li>
-										<li class="icon solid fa-cubes">Power BI</li>
-										<li class="icon solid fa-book">Tableau</li>
-										<li class="icon solid fa-code">Python</li>
-										<li class="icon solid fa-bolt">Machine Learning</li>
-										<li class="icon solid fa-users">C++</li>
-									</ul>
-								</div>
-							</section>
+  /* CUSTOM CURSOR */
+  .cursor {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transition: transform 0.15s ease;
+    mix-blend-mode: screen;
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(99,179,237,0.4);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transition: transform 0.08s linear, width 0.2s ease, height 0.2s ease, opacity 0.2s;
+  }
+  body:has(a:hover) .cursor-ring, body:has(button:hover) .cursor-ring {
+    width: 48px; height: 48px;
+  }
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>A Few Projects</h3>
-									<p>Some of my personnel projects</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/credit_card.jpg" alt="" /></a>
-											<div class="inner">
-												<a href= https://github.com/hritikadev/analytics-project/tree/main/fraud_detection  target="_blank" ><span class="label">
-													<h4>Credit Card Fraud Detections<i class="material-icons">attachment</i></h4>
-												</span></a>
-												<p> Developed ML models using Jupyter Notebook.<br>
-													Conducted a comprehensive model comparison, evaluating SVM, Sequential Shallow Neural Network, 
-													Logistic Regression, and Gradient Boost algorithms based on recall and F1-score metrics, particularly on 
-													an unbalanced dataset</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/sales.png" alt="" /></a>
-											<div class="inner">
-												<a href= https://github.com/hritikadev/analytics-project/tree/main/sales_analysis  target="_blank" ><span class="label">
-													<h4>Sales Analysis<i class="material-icons">attachment</i></h4>
-												</span></a>
-												
-												<p>  
-													Analyzed Amazon's sales data and extracted valuable insights using Python libraries within the Jupyter 
-													Notebook framework.<br>
-													Leveraged skills in Python, Pandas, Matplotlib, and Seaborn to analyze and visualize sales data.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/anomly.png" alt="" /></a>
-											<div class="inner">
-												<a href = https://github.com/hritikadev/analytics-project/tree/main/HR_employee_insights target="_blank" ><span class="label">
-												<h4>HR analytics – Employee Attrition <i class="material-icons">attachment</i></h4></span></a>
-												<p>Analyzed employee demographics and attrition rates within the company.
-													<br>Explored various metrics to assess and understand the workforce trends and factors affecting employee 
-													attrition and retention.
-										
-													</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/covid_19.jpg" alt="" /></a>
-											<div class="inner">
-												<a href = https://github.com/hritikadev/analytics-project/tree/main/covid_19 target="_blank" ><span class="label">
-												<h4>Covid 19 analysis <i class="material-icons">attachment</i></h4>
-											</span></a>
-												<p>Analysed world data of Covid 19 and made a tableau visualisation.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; opacity: 0.6;
+  }
 
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Let's connect.</h3>
-									<p>Reach to know me or hire me. </p>
-										<li><a href= https://www.linkedin.com/in/devhritika  target="_blank" ><span class="label">LinkedIn</span></a></li>
-										<li><a href= https://github.com/hritikadev  target="_blank"  ><span class="label">Github</span></a></li>
-										<li><a href= mailto:hritikadev@gmail.com  target="_blank" ><span class="label">Email</span></a></li>
-									
-								</div>
-							</section>
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: linear-gradient(to bottom, rgba(8,12,16,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover::after { transform: scaleX(1); }
 
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    gap: 60px;
+  }
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(99,179,237,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,179,237,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--accent);
+  }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+  .hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--accent);
+  }
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+  .hero-cta {
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    padding: 14px 32px;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(99,179,237,0.3);
+  }
+  .btn-ghost {
+    padding: 13px 32px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+  /* HERO STATS */
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideIn 0.6s ease forwards;
+  }
+  .stat-card:nth-child(1) { animation-delay: 0.3s; }
+  .stat-card:nth-child(2) { animation-delay: 0.45s; }
+  .stat-card:nth-child(3) { animation-delay: 0.6s; }
+  .stat-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+  .stat-card:hover { border-color: rgba(99,179,237,0.3); }
+  .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .stat-sub {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+  @keyframes slideIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+  /* SECTIONS */
+  section { padding: 100px 60px; position: relative; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    display: block; width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 60px;
+    color: var(--text);
+  }
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+  /* ABOUT */
+  #about { background: var(--surface); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.85;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .about-text p strong { color: var(--text); font-weight: 500; }
+  .about-text p em { color: var(--accent); font-style: normal; }
 
-								</div>
-							</section>
-						-->
+  .about-aside { display: flex; flex-direction: column; gap: 16px; }
+  .aside-item {
+    padding: 20px 24px;
+    background: var(--surface2);
+    border-left: 2px solid var(--accent);
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .aside-item strong { color: var(--text); display: block; margin-bottom: 4px; font-size: 0.92rem; }
 
-					</div>
+  /* SKILLS */
+  #skills { background: var(--bg); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+  }
+  .skill-block {
+    background: var(--surface);
+    padding: 36px 32px;
+    transition: background 0.3s;
+  }
+  .skill-block:hover { background: var(--surface2); }
+  .skill-icon {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  .skill-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .skill-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .tag {
+    padding: 4px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    letter-spacing: 0.05em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .tag:hover { border-color: var(--accent); color: var(--accent); }
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+  /* EXPERIENCE */
+  #experience { background: var(--surface); }
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 8px; bottom: 8px;
+    width: 1px; background: var(--border);
+  }
+  .job {
+    padding-left: 40px;
+    margin-bottom: 56px;
+    position: relative;
+  }
+  .job::before {
+    content: '';
+    position: absolute; left: -4px; top: 8px;
+    width: 9px; height: 9px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(99,179,237,0.6);
+  }
+  .job-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .job-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.45rem;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .job-company {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .job-bullets {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .job-bullets li {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.7;
+    padding-left: 18px;
+    position: relative;
+    font-weight: 300;
+  }
+  .job-bullets li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent2);
+    font-size: 0.8rem;
+  }
+  .job-bullets li strong { color: var(--text); font-weight: 500; }
 
-			</div>
+  /* PROJECTS */
+  #projects { background: var(--bg); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: var(--border);
+    margin-bottom: 2px;
+  }
+  .project-card {
+    background: var(--surface);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: block;
+  }
+  .project-card:hover { background: var(--surface2); }
+  .project-card::after {
+    content: '↗';
+    position: absolute; top: 32px; right: 36px;
+    font-size: 1.1rem;
+    color: var(--muted);
+    transition: color 0.2s, transform 0.2s;
+  }
+  .project-card:hover::after { color: var(--accent); transform: translate(2px,-2px); }
+  .project-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+  }
+  .project-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .project-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+  .project-highlights {
+    display: flex; flex-direction: column; gap: 6px;
+    margin-bottom: 24px;
+  }
+  .project-highlight {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .project-highlight::before {
+    content: '';
+    width: 16px; height: 1px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .project-stack {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .stack-tag {
+    padding: 3px 10px;
+    background: var(--faint);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border: 1px solid var(--border);
+  }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  /* FEATURED wide project */
+  .project-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 48px;
+  }
+  .project-card.featured .project-name { font-size: 1.8rem; }
 
-	</body>
+  /* CONTACT */
+  #contact {
+    background: var(--surface);
+    text-align: center;
+  }
+  .contact-inner { max-width: 600px; margin: 0 auto; }
+  .contact-inner p {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .contact-links {
+    display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+  }
+  .contact-link {
+    padding: 14px 28px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .contact-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(99,179,237,0.05);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+  }
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* HERO ANIMATION */
+  .hero-left > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .hero-left .hero-tag  { animation-delay: 0.1s; }
+  .hero-left .hero-name { animation-delay: 0.22s; }
+  .hero-left .hero-subtitle { animation-delay: 0.34s; }
+  .hero-left .hero-cta { animation-delay: 0.46s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 28px; }
+    #hero { grid-template-columns: 1fr; padding: 120px 28px 60px; }
+    section { padding: 70px 28px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-template-columns: 1fr; gap: 28px; }
+    footer { padding: 24px 28px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+  @media (max-width: 560px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">HD</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-left">
+    <div class="hero-tag">Data Analyst · Open to Opportunities</div>
+    <h1 class="hero-name">Hritika<br><em>Dev</em></h1>
+    <p class="hero-subtitle">
+      I turn complex, messy data into decisions that move the needle —
+      through scalable pipelines, sharp dashboards, and ML models
+      that actually get used.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-number">2+</div>
+      <div class="stat-label">Years of Production Experience</div>
+      <div class="stat-sub">Ayna.ai · Saint Louis University</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">41%</div>
+      <div class="stat-label">Surplus Inventory Reduced</div>
+      <div class="stat-sub">via KPI-driven dashboards freeing working capital</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">10–12h</div>
+      <div class="stat-label">Weekly Manual Work Eliminated</div>
+      <div class="stat-sub">through Python & Power BI automation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">Background</div>
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>
+        I'm a <strong>B.Tech graduate from NIT Delhi</strong> with a focus on data analytics and machine learning.
+        Over the last two years, I've worked across fast-moving startups where data had real, immediate stakes —
+        from <em>pricing engines for competitive tenders</em> to inventory systems that freed up working capital.
+      </p>
+      <p>
+        My background spans the full data lifecycle: <strong>designing ETL pipelines</strong>,
+        building KPI frameworks from scratch, and delivering BI dashboards that actually change
+        how teams make decisions. I care about the numbers being right, the code being clean,
+        and the output being usable.
+      </p>
+      <p>
+        Outside of work, I've applied ML to scientific problems — detecting bearing faults in
+        motor vibration data using Discrete Wavelet Transform, achieving <em>98.6% classification accuracy</em>.
+        I'm equally comfortable in rigorous, research-driven environments as in product analytics roles.
+      </p>
+    </div>
+    <div class="about-aside">
+      <div class="aside-item">
+        <strong>Currently</strong>
+        Data Analyst at Ayna.ai, Bengaluru
+      </div>
+      <div class="aside-item">
+        <strong>Education</strong>
+        B.Tech · NIT Delhi · CGPA 7.6 · 2024
+      </div>
+      <div class="aside-item">
+        <strong>Interests</strong>
+        Distributed computing, ML for scientific data, dashboard design, causal inference
+      </div>
+      <div class="aside-item">
+        <strong>Status</strong>
+        Open to Data Analyst / Scientist roles globally
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Technical Toolkit</div>
+  <h2 class="section-title">Skills &amp; Stack</h2>
+  <div class="skills-grid reveal">
+    <div class="skill-block">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-title">Languages &amp; Query</div>
+      <div class="skill-tags">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">PySpark</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">📊</div>
+      <div class="skill-title">BI &amp; Visualisation</div>
+      <div class="skill-tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
+        <span class="tag">Google Analytics</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-title">Machine Learning</div>
+      <div class="skill-tags">
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">Random Forest</span>
+        <span class="tag">SVM</span>
+        <span class="tag">XGBoost</span>
+        <span class="tag">SMOTE</span>
+        <span class="tag">KNN</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">🔧</div>
+      <div class="skill-title">Data Engineering</div>
+      <div class="skill-tags">
+        <span class="tag">ETL Pipelines</span>
+        <span class="tag">Spark</span>
+        <span class="tag">Data Cleaning</span>
+        <span class="tag">KPI Frameworks</span>
+        <span class="tag">Feature Engineering</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">🛠</div>
+      <div class="skill-title">Tools &amp; Workflow</div>
+      <div class="skill-tags">
+        <span class="tag">Advanced Excel</span>
+        <span class="tag">JIRA</span>
+        <span class="tag">Git</span>
+        <span class="tag">Jupyter</span>
+        <span class="tag">Agile</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <div class="skill-icon">📐</div>
+      <div class="skill-title">Core Competencies</div>
+      <div class="skill-tags">
+        <span class="tag">A/B Testing</span>
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">Storytelling</span>
+        <span class="tag">Stakeholder Comms</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline reveal">
+
+    <div class="job">
+      <div class="job-meta">Aug 2024 – Present · Full-time</div>
+      <div class="job-title">Data Analyst</div>
+      <div class="job-company">Ayna.ai · Bengaluru, IN</div>
+      <ul class="job-bullets">
+        <li>Architected an <strong>AI-powered quotation platform</strong> unifying engineering specs, product configuration logic, and real-time pricing models — cutting bid turnaround from <strong>1–2 days to hours</strong> and enabling live margin optimisation across competitive tenders.</li>
+        <li>Built an automated end-to-end <strong>inventory reporting pipeline</strong> in Python and Power BI, eliminating <strong>10–12 hours of manual processing per week</strong> and reallocating capacity toward strategic analysis.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-meta">Mar 2024 – Jul 2024 · Internship</div>
+      <div class="job-title">Data / Systems Intern</div>
+      <div class="job-company">Ayna.ai · Chennai, IN</div>
+      <ul class="job-bullets">
+        <li>Diagnosed fulfillment bottlenecks via shipment data analysis; achieved a <strong>15% uplift in operational throughput</strong>, creating headroom for higher order volumes.</li>
+        <li>Designed <strong>KPI-driven inventory dashboards</strong> for Finance and Operations; reduced surplus inventory by <strong>41%</strong>, directly freeing working capital for strategic reinvestment.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-meta">Aug – Sep 2023 · Internship</div>
+      <div class="job-title">Data Analyst Intern</div>
+      <div class="job-company">Saint Louis University · Remote</div>
+      <ul class="job-bullets">
+        <li>Built campaign performance dashboards tracking digital KPIs; surfaced spend inefficiencies that <strong>cut ad budget by 47%</strong> while preserving campaign reach.</li>
+        <li>Delivered ROI and attribution insights to marketing leadership, directly shaping <strong>budget reallocation and go-forward strategy</strong>.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Work &amp; Research</div>
+  <h2 class="section-title">Project Highlights</h2>
+
+  <div class="projects-grid reveal">
+
+    <!-- FEATURED -->
+    <a href="https://github.com/hritikadev/analytics-project/tree/main/fraud_detection" target="_blank" class="project-card featured">
+      <div>
+        <div class="project-number">01 · Featured</div>
+        <div class="project-name">Credit Card Fraud Detection on Highly Imbalanced Data</div>
+        <div class="project-highlights">
+          <div class="project-highlight">86% Precision · 85% Recall on unbalanced dataset</div>
+          <div class="project-highlight">0.18% minority class prevalence</div>
+          <div class="project-highlight">SMOTE + threshold optimisation + class weighting</div>
+        </div>
+      </div>
+      <div>
+        <p class="project-desc">
+          Built a multi-model classification pipeline on a severely imbalanced fraud dataset.
+          Benchmarked SVM, Logistic Regression, Gradient Boost, and Neural Networks.
+          Applied SMOTE oversampling and threshold tuning to achieve strong recall
+          without sacrificing precision — critical in fraud contexts where false negatives are costly.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Scikit-learn</span>
+          <span class="stack-tag">SMOTE</span>
+          <span class="stack-tag">XGBoost</span>
+          <span class="stack-tag">Jupyter</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://github.com/hritikadev/analytics-project/tree/main/sales_analysis" target="_blank" class="project-card">
+      <div class="project-number">02</div>
+      <div class="project-name">Amazon Sales Analysis</div>
+      <p class="project-desc">
+        Analyzed Amazon sales data to extract seasonal trends, top-performing SKUs,
+        and regional demand patterns using Python. Built visual reports for
+        decision-maker consumption.
+      </p>
+      <div class="project-highlights">
+        <div class="project-highlight">End-to-end EDA pipeline</div>
+        <div class="project-highlight">Actionable visual storytelling</div>
+      </div>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Pandas</span>
+        <span class="stack-tag">Matplotlib</span>
+        <span class="stack-tag">Seaborn</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/hritikadev/analytics-project/tree/main/HR_employee_insights" target="_blank" class="project-card">
+      <div class="project-number">03</div>
+      <div class="project-name">HR Analytics — Employee Attrition</div>
+      <p class="project-desc">
+        Analyzed employee demographics and attrition drivers across departments.
+        Identified key retention risk factors and built dashboards tracking workforce trends
+        for HR leadership.
+      </p>
+      <div class="project-highlights">
+        <div class="project-highlight">Multi-factor attrition modelling</div>
+        <div class="project-highlight">Interactive HR dashboards</div>
+      </div>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Power BI</span>
+        <span class="stack-tag">Statistical Analysis</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/hritikadev/analytics-project/tree/main/covid_19" target="_blank" class="project-card">
+      <div class="project-number">04</div>
+      <div class="project-name">COVID-19 Global Data Analysis</div>
+      <p class="project-desc">
+        Analysed worldwide COVID-19 progression data — case growth rates, mortality trends,
+        and regional comparisons — and built an interactive Tableau visualisation for public insight.
+      </p>
+      <div class="project-highlights">
+        <div class="project-highlight">Global dataset · time-series analysis</div>
+        <div class="project-highlight">Interactive Tableau dashboard</div>
+      </div>
+      <div class="project-stack">
+        <span class="stack-tag">Tableau</span>
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Pandas</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Research callout -->
+  <div style="margin-top:2px; background:var(--surface); border:1px solid rgba(246,173,85,0.2); padding:40px; display:grid; grid-template-columns:1fr auto; align-items:center; gap:40px;" class="reveal">
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent2);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">Research · NIT Delhi</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:10px;">Bearing Fault Detection via DWT &amp; ML</div>
+      <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;font-weight:300;max-width:560px;">
+        Pre-processed 9 sets of motor vibration data; applied Discrete Wavelet Transform to extract 10+ statistical features. Trained and benchmarked Weighted KNN and SVM — achieving <strong style="color:var(--accent2)">98.6% classification accuracy</strong>. Mentored by Dr. Sachin Kumar Singh, Asst. Professor.
+      </p>
+      <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">DWT</span>
+        <span class="stack-tag">Scikit-learn</span>
+        <span class="stack-tag">SVM</span>
+        <span class="stack-tag">KNN</span>
+        <span class="stack-tag">Signal Processing</span>
+      </div>
+    </div>
+    <div style="text-align:center;flex-shrink:0;">
+      <div style="font-family:'DM Serif Display',serif;font-size:3.5rem;color:var(--accent2);line-height:1;">98.6%</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">Classification Accuracy</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner reveal">
+    <div class="section-label" style="justify-content:center;">Let's Talk</div>
+    <h2 class="section-title" style="margin-bottom:20px;">Get In Touch</h2>
+    <p>
+      I'm open to full-time Data Analyst and Data Scientist roles — especially in
+      product analytics, scientific computing, or anything that rewards rigorous thinking.
+      Reach out and let's talk.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:hritikadev@gmail.com" class="contact-link">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/devhritika" target="_blank" class="contact-link">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/hritikadev" target="_blank" class="contact-link">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Hritika Dev · Data Analyst</p>
+  <p>Jharkhand, India · Open to Relocation</p>
+</footer>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.transform = `translate(${rx - 16}px, ${ry - 16}px)`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Nav active state
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
+    });
+  });
+</script>
+</body>
 </html>
